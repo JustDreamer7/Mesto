@@ -1,4 +1,5 @@
-class CardList { // в названиях классов следует использовать PascalCase: CardList
+import Card from './card.js';
+export default class CardList { // в названиях классов следует использовать PascalCase: CardList
     constructor(cards) { // следует использовать camelCase: startArray
         this.cards = cards;
     }
