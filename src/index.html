@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
 </head>
 
 <body>
 
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg')%>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -34,7 +33,7 @@
     </div>
     <div class="popup popup_card">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" name="new">
           <input type="text" name="card" id="card" class="popup__input popup__input_type_name" placeholder="Название" minlength="3" maxlength="20" required>
@@ -48,7 +47,7 @@
     </div>
     <div class="popup popup_profile">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" name="profile">
           <input type="text" name="name" id="name" class="popup__input popup__input_type_yourname" placeholder="Имя"
@@ -63,7 +62,7 @@
     </div>
     <div class="popup popup_avatar">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
         <h3 class="popup__title">Обновить аватaр</h3>
         <form class="popup__form" name="avatar">
           <input type="url" name="avatar" id="avatar" class="popup__input popup__input_type_avatar" placeholder="Ccылка на аватар" required>
@@ -74,16 +73,10 @@
     </div>
     <div class="popup popup_image">
       <div class="popup__background" style>
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
       </div>
     </div>
-    <script src="./scripts/Api.js"></script>
-    <script src="./scripts/card.js"></script>
-    <script src="./scripts/popup.js"></script>
-    <script src="./scripts/cardlist.js"></script>
-    <script src="./scripts/userinfo.js"></script>
-    <script src="./scripts/formvalidator.js"></script>
-    <script src="./scripts/script.js"></script>
+    <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 
 </html>
