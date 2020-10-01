@@ -38,7 +38,7 @@ import '../index.css';
     const validAvtr = new FormValidator(newAvtr);
     const cardList = new CardList(placesList);
     const api = new Api({
-        url: 'https://nomoreparties.co/cohort12',
+        url: NODE_ENV === 'development' ? 'http://nomoreparties.co/cohort12' : 'https://nomoreparties.co/cohort12',
         method: 'GET',
         headers: {
             authorization: '0a820da4-7501-484a-bba0-d11cee45b3d8',
